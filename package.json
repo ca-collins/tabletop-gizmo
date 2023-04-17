@@ -1,0 +1,33 @@
+{
+  "name": "tabletop-gizmo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron ./electron/main.js",
+    "dev": "concurrently \"npm run gizmo:dev\" \"npm run electron\"",
+    "gizmo:dev": "cd gizmo && npm run serve",
+    "gizmo:build": "cd gizmo && npm run build",
+    "build": "npm run gizmo:build && electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ca-collins/tabletop-gizmo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ca-collins/tabletop-gizmo/issues"
+  },
+  "homepage": "https://github.com/ca-collins/tabletop-gizmo#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0"
+  }
+}
