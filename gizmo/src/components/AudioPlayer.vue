@@ -5,12 +5,14 @@
   </template>
   
   <script>
+  import sampleAudio from '@/assets/audio/sample.mp3';
+
   export default {
     methods: {
-      playAudio() {
-        const audio = new Audio(require('@/assets/audio/sample.mp3'));
-        audio.play();
-      },
+        playAudio() {
+            const audio = new Audio(sampleAudio);
+            audio.play();
+        },
     },
   };
   </script>
